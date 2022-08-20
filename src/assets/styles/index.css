@@ -10,3 +10,14 @@
     @apply block bg-gradient-to-r from-ct-blue to-ct-green rounded-lg py-2 px-8 text-white font-sanstc;
   }
 }
+
+@layer utilities {
+  .ellipsis-3 {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+}

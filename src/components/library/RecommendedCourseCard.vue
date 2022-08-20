@@ -21,7 +21,7 @@ defineProps({
       <div>
         <h4 class="text-xl font-bold mb-2 md:h-14">{{ title }}</h4>
         <p class="text-base text-ct-green mb-2">{{ category }}</p>
-        <p class="text-base">
+        <p class="text-base ellipsis-3">
           {{ desc }}
         </p>
       </div>
