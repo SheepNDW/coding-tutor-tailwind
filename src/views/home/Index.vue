@@ -5,6 +5,7 @@ import HomeFlow from './HomeFlow.vue';
 import HomeLanguageList from './HomeLanguageList.vue';
 import HomePopular from './HomePopular.vue';
 import HomeAdvantage from './HomeAdvantage.vue';
+import HomeArticles from './HomeArticles.vue';
 </script>
 
 <template>
@@ -15,5 +16,6 @@ import HomeAdvantage from './HomeAdvantage.vue';
     <HomeLanguageList />
     <HomePopular />
     <HomeAdvantage />
+    <HomeArticles />
   </main>
 </template>
