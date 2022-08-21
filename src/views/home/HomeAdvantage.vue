@@ -48,7 +48,7 @@
       <div
         class="text-center lg:text-left font-sanstc py-10 lg:py-[216px] lg:px-12 bg-blend-multiply bg-[url(@/assets/images/info04.jpg)] bg-cover bg-center bg-ct-dark/90 hover:bg-ct-dark/30 transition-all group"
       >
-        <i-ic:round-people
+        <i-ic:round-supervisor-account
           class="text-ct-green text-[32px] mx-auto lg:ml-0 mb-4 lg:text-white/50 lg:group-hover:text-ct-green"
         />
         <h3 class="heading-3">一對一指導</h3>
