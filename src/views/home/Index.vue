@@ -6,6 +6,7 @@ import HomeLanguageList from './HomeLanguageList.vue';
 import HomePopular from './HomePopular.vue';
 import HomeAdvantage from './HomeAdvantage.vue';
 import HomeArticles from './HomeArticles.vue';
+import HomeReviews from './HomeReviews.vue';
 </script>
 
 <template>
@@ -17,5 +18,6 @@ import HomeArticles from './HomeArticles.vue';
     <HomePopular />
     <HomeAdvantage />
     <HomeArticles />
+    <HomeReviews />
   </main>
 </template>
