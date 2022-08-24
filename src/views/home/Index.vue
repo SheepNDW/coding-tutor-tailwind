@@ -7,6 +7,7 @@ import HomePopular from './HomePopular.vue';
 import HomeAdvantage from './HomeAdvantage.vue';
 import HomeArticles from './HomeArticles.vue';
 import HomeReviews from './HomeReviews.vue';
+import HomeJoinUs from './HomeJoinUs.vue';
 </script>
 
 <template>
@@ -19,5 +20,6 @@ import HomeReviews from './HomeReviews.vue';
     <HomeAdvantage />
     <HomeArticles />
     <HomeReviews />
+    <HomeJoinUs />
   </main>
 </template>
