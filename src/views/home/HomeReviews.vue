@@ -48,7 +48,7 @@ const slidesContent = [
 const swiper = ref(null);
 
 onMounted(() => {
-  swiper.value = new Swiper('.swiper', {
+  swiper.value = new Swiper('.reviews-swiper', {
     // Optional parameters
     effect: 'fade',
     fadeEffect: {
@@ -75,7 +75,7 @@ onMounted(() => {
       <div class="w-[50px] h-[3px] bg-ct-green mx-auto mb-6 lg:mb-12"></div>
       <!-- swiper -->
       <div class="grid grid-cols-12">
-        <div class="swiper col-start-1 col-end-13 lg:col-start-3 lg:col-end-11">
+        <div class="swiper reviews-swiper col-start-1 col-end-13 lg:col-start-3 lg:col-end-11">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
