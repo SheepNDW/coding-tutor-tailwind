@@ -1,13 +1,22 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 import Swiper, { Autoplay } from 'swiper';
 import 'swiper/css';
 
-defineProps({
+const props = defineProps({
   slides: Array,
+  isLoop: {
+    type: Boolean,
+    default: false,
+  },
+  isAutoplay: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const swiper = ref(null);
+const modules = props.isAutoplay ? [Autoplay] : [];
 
 onMounted(() => {
   swiper.value = new Swiper('.cate-swiper', {
@@ -20,9 +29,13 @@ onMounted(() => {
       disableOnInteraction: false,
       pauseOnMouseEnter: true,
     },
-    loop: true,
-    modules: [Autoplay],
+    loop: props.isLoop,
+    modules,
   });
+});
+
+onUnmounted(() => {
+  swiper.value = null;
 });
 </script>
 
@@ -30,7 +43,7 @@ onMounted(() => {
   <div class="cate-swiper">
     <ul class="swiper-wrapper">
       <li
-        class="cate-swiper-slide text-white font-sanstc font-bold p-4 md:px-6 border border-white rounded-lg"
+        class="cate-swiper-slide shrink-0 self-center text-white font-sanstc font-bold p-4 md:px-6 border border-white rounded-lg"
         v-for="(item, i) in slides"
         :key="i"
       >

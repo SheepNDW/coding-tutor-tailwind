@@ -19,7 +19,7 @@ const languageList = [
     <div class="container">
       <h3 class="heading-3 text-center">你想要學習的程式，都在這裡</h3>
       <div class="w-[50px] h-[3px] bg-ct-green mx-auto mb-6"></div>
-      <CateSwiper :slides="languageList" />
+      <CateSwiper :slides="languageList" :is-loop="true" :is-autoplay="true" />
     </div>
   </div>
 </template>

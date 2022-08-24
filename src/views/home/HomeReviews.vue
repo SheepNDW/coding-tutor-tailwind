@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
 const slidesContent = [
   {
@@ -63,6 +63,10 @@ onMounted(() => {
     },
     modules: [Navigation, Pagination, EffectFade],
   });
+});
+
+onUnmounted(() => {
+  swiper.value = null;
 });
 </script>
 
