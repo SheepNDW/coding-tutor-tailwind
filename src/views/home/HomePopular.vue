@@ -15,9 +15,9 @@ const { courseList } = store;
         <RecommendedCourseCard v-for="item in courseList" :key="item.id" v-bind="{ ...item }" />
       </div>
 
-      <button class="gradient-btn mx-auto text-lg">所有課程列表</button>
+      <button class="gradient-btn w-auto mx-auto text-lg" @click="$router.push('/classes')">
+        所有課程列表
+      </button>
     </div>
   </div>
 </template>
-
-<style scoped></style>

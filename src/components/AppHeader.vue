@@ -1,15 +1,22 @@
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 import logoPC from '@/assets/images/logo.svg';
 import logoM from '@/assets/images/logo2.svg';
 
+const router = useRouter();
+
 const isDropdown = ref(false);
+const moveToHomePage = () => {
+  isDropdown.value = false;
+  router.push('/');
+};
 </script>
 
 <template>
   <header class="h-[72px] md:h-[90px] bg-ct-dark-light sticky top-0 z-[1000]">
     <div class="container h-[70px] md:h-[88px] flex items-center">
-      <h1 class="h-6 w-6 md:h-12 md:w-[175px] mr-auto" @click="isDropdown = false">
+      <h1 class="h-6 w-6 md:h-12 md:w-[175px] mr-auto" @click="moveToHomePage">
         <img class="block md:hidden max-w-full" :src="logoM" alt="logo" />
         <img class="hidden md:block max-w-full" :src="logoPC" alt="logo" />
       </h1>
@@ -19,7 +26,7 @@ const isDropdown = ref(false);
           <router-link to="/">首頁</router-link>
         </li>
         <li class="transition hover:text-ct-green">
-          <router-link to="/">課程介紹</router-link>
+          <router-link to="/classes">課程介紹</router-link>
         </li>
         <li class="transition hover:text-ct-green">
           <router-link class="flex gap-1 items-center" to="/">
@@ -39,7 +46,7 @@ const isDropdown = ref(false);
         <router-link to="/" @click="isDropdown = false">首頁</router-link>
       </li>
       <li class="transition hover:text-ct-green">
-        <router-link to="/" @click="isDropdown = false">課程介紹</router-link>
+        <router-link to="/classes" @click="isDropdown = false">課程介紹</router-link>
       </li>
       <li class="transition hover:text-ct-green">
         <router-link class="flex gap-1 items-center" to="/" @click="isDropdown = false">
