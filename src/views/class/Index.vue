@@ -53,6 +53,7 @@ const { courseList } = store;
               </p>
               <div class="flex flex-row lg:flex-col gap-2 justify-center">
                 <button
+                  @click="$router.push('/classDetail')"
                   class="block rounded-lg border border-white py-2 px-8 text-lg text-white font-sanstc"
                 >
                   課程介紹

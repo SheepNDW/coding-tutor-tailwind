@@ -16,7 +16,7 @@ const moveToHomePage = () => {
 <template>
   <header class="h-[72px] md:h-[90px] bg-ct-dark-light sticky top-0 z-[1000]">
     <div class="container h-[70px] md:h-[88px] flex items-center">
-      <h1 class="h-6 w-6 md:h-12 md:w-[175px] mr-auto" @click="moveToHomePage">
+      <h1 class="h-6 w-6 md:h-12 md:w-[175px] mr-auto cursor-pointer" @click="moveToHomePage">
         <img class="block md:hidden max-w-full" :src="logoM" alt="logo" />
         <img class="hidden md:block max-w-full" :src="logoPC" alt="logo" />
       </h1>
